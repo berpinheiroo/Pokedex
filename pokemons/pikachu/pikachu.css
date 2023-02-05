@@ -22,6 +22,17 @@ body {
     background-color: #add8e6;
 }
 
+section {
+    margin-bottom: 1em !important;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+.white {
+    color: #fff;
+}
 
 .navbar {
     background-color: rgb(148, 253, 218);
@@ -53,163 +64,189 @@ body {
     background-color: #ebd272;
 }
 
-
-.pokemonBar{
-    background-color: rgb(180, 255, 52);
+.pokemonsBar {
     display: flex;
+    background-color: rgb(31, 255, 169);
     justify-content: space-between;
-    padding: 0.7em 2em 0.7em 2em;
-    font-size: larger;
+    padding: 1em 2em 1em 2em;
+    font-weight: 600;
 }
 
-.content{
-    height: 70vh;
+.pokemonsBar>div a {
+    transition-duration: 0.3s;
 }
 
-.pokemonCard{
-    width: 20vw;
-    height: 43vh;
-    background-color: rgb(125, 171, 245);
-    border-radius: 1vw;
-    margin-top: 4vh; 
-    margin-left: 40vw;
+.pokemonsBar>div a:hover {
+    transition-duration: 0.3s;
+    padding: 0.3em;
+    background-color: aqua;
+}
+
+.pokemonImg {
     display: flex;
-    overflow: hidden;
+    grid-area: img;
 }
 
-.pokemonImage{
-    width: 18vw;
-    height: 38vh;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    background-color: white;
-    border-radius: 0.2vw;
+.about {
+    grid-area: a;
+    font-weight: 500;
 }
 
-.aboutPokemon{
-    width: 20vw;
-    height: 10vh;
-    margin-left: 3vh;
-    margin-top: 4vh;
-    font-size: large;
+.column1 {
+    grid-area: c1;
 }
 
-.height, .weight, .category, .abilities{
-    width: 8vw;
-    margin-top: 5vh;
-    margin-left: 3vh;
-    float: left;
-    font-size: large;
+.column2 {
+    grid-area: c2;
 }
 
-.title{
-    color: white;
-    font-size: large;
-}
-
-.pokemonCard:hover{
-    transition-duration: 1.2s;
-    width: 40vw;
-    margin-left: 30vw;
-}
-
-.pokemonStatus{
-    background-color: rgb(157, 251, 157);
-    width: 40vw;
-    height: 30vh;
+.pokemon {
+    display: grid;
+    grid-template-columns: 100% 0 0;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "img a a" "img c1 c2";
+    column-gap: 1em;
+    background-color: #30a7d7;
+    width: 15em;
+    height: 15em;
+    padding: 1em;
     margin: 0 auto;
-    margin-top: 5vh;
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition-duration: 0.3s;
 }
 
-.status{
-    text-align: center;
+.pokemon img {
+    background-color: #fff;
+    border-radius: 0.2em;
 }
 
-#status{
-    padding: 0.5vh;
+.pokemon:hover {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "img a a" "img c1 c2";
+    width: 30em;
+    transition-duration: 0.3s
 }
 
-.hp, .attack, .defense, .spAtk, .spDef, .speed{
-    width: 8vw;
-    height: 4vh;
-    margin-left: 0.5vh;
-    margin-top: 0.3vh;
+.about>p {
+    text-align: justify;
 }
 
-.hpStatus, .attackStatus, .defenseStatus, .spAtkStatus, .spDefStatus, .speedStatus{
-    width: 31.2vw;
-    height: 4vh;
-    margin-left: 0.5vh;
-    margin-top: 0.3vh;
+.stats {
+    background-color: rgb(113, 230, 157);
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "h h" "c b";
+    column-gap: 0.2em;
+    width: 30em;
+    height: 20em;
+    margin: 0 auto;
+    padding: 0.5em 0.5em 0 0.5em;
 }
 
-.hp, .hpStatus{
-    background-color: rgb(253, 123, 123);
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
 
-.attack, .attackStatus{
-    background-color: rgb(253, 181, 123);
+.caption {
+    padding: 0.3em;
 }
 
-.defense, .defenseStatus{
-    background-color: rgb(255, 249, 189);
+.bar>div {
+    height: 100%;
 }
 
-.spAtk, .spAtkStatus{
-    background-color: rgb(151, 194, 255);
+.caption,
+.bar {
+    border-radius: 0.2em;
+    height: 12%;
+    margin-bottom: 0.3em;
+    border: solid #000 0.1em;
 }
 
-.spDef, .spDefStatus{
-    background-color: rgb(98, 187, 117);
+.hp {
+    background-color: #ff5959;
 }
 
-.speed, .speedStatus{
-    background-color: rgb(255, 148, 214);
+.attack {
+    background-color: #f5ac78;
 }
 
-.hpSecondStatus, .attackSecondStatus, .defenseSecondStatus, .spAtkSecondStatus, .spDefSecondStatus, .speedSecondStatus{
-    height: 4vh;
+.defense {
+    background-color: #fae078;
 }
 
-.hpSecondStatus, .spAtkSecondStatus{
-    width: 6vw;
+.spatk {
+    background-color: #9db7f5;
 }
 
-.hpSecondStatus{
-    background-color: rgb(254, 0, 0);
+.spdef {
+    background-color: #a7db8d;
 }
 
-.spAtkSecondStatus{
-    background-color: rgb(0, 106, 255);
+.speed {
+    background-color: #fa92b2;
 }
 
-.attackSecondStatus{
-    background-color: rgb(246, 112, 39);
-    width: 12vw;
+.hpBar {
+    background-color: #ff5959;
 }
 
-.defenseSecondStatus, .spDefSecondStatus{
-    width: 8vw;
+.hpBar>div {
+    width: 78px;
+    background-color: #ff0000;
 }
 
-.defenseSecondStatus{
-    background-color: rgb(255, 247, 0);
+.attackBar {
+    background-color: #f5ac78;
+
 }
 
-.spDefSecondStatus{
-    background-color: rgb(0, 181, 39);
+.attackBar>div {
+    background-color: #fa6800;
+    width: 84px;
 }
 
-.speedSecondStatus{
-    background-color: rgb(255, 20, 165);
-    width: 15vw;
+.defenseBar {
+    background-color: #fae078;
 }
 
-.stat{
-    float: left;
+.defenseBar>div {
+    background-color: #ffcc00;
+    width: 78px;
 }
 
-.titleStatus{
-    text-align: center;
-    margin-top: 0.7vh;
+.spatkBar {
+    background-color: #9db7f5;
+}
+
+.spatkBar>div {
+    background-color: #3d78ff;
+    width: 109px;
+}
+
+.spdefBar {
+    background-color: #a7db8d;
+}
+
+.spdefBar>div {
+    background-color: #67d82e;
+    width: 85px;
+}
+
+.speedBar {
+    background-color: #fa92b2;
+}
+
+.speedBar>div {
+    background-color: #ff4980;
+    width: 100px;
 }
