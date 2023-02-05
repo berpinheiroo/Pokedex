@@ -10,62 +10,83 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navBar">
-            <section>
-                <img class="logo" src="../../imagens/pokemon-logo-svg.svg" alt="Logotipo Pokemon" height="80"
-                    width="150">
-            </section>
-            <section class="navOptions">
-                <a href="../../index.html">Home</a>
-                <a href="../../pokemons/bulbasaur.html">Pokedex</a>
-                <a href="../../cadastro.html">Cadastro</a>
-            </section>
+    <header class="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../imagens/pokemon-logo-svg.svg" alt="Logotipo Pokemon" width="120">
+        </a>
+        <nav>
+            <ul class="navLinks">
+                <li><a class="navLink" href="../../index.html">Home</a></li>
+                <li><a class="navLink" href="../../pokemons/bulbasaur/bulbasaur.html">Pokedex</a></li>
+                <li><a class="navLink" href="../../cadastro.html">Cadastro</a></li>
+            </ul>
         </nav>
-        <nav class="searchSection">
-            <section class="navOptions2">
-                <a href="../../index.html">Home</a>
-                <a href="">Bulbasaur</a>
-                <a href="../../pokemons/charmander/charmander.html">Charmander</a>
-            </section>
-        </nav>
-        <section class="content">
-            <article class="pokemon">
-                <img src="../../imagens/bulbasaur.png" alt="Bulbasaur">
-            </article>
-
-
-
-    </div>
-    </section>
-    <section class="features">
-        <div>
-            <h3>Stat</h3>
+    </header>
+    <section class="pokemonsBar">
+        <div class="prev">
+            <a href="../../pokemons/pikachu/pikachu.html">
+                < Pikachu </a>
+        </div>
+        <div class="current">
+            <a href="#">Nº 001 Bulbasaur</a>
+        </div>
+        <div class="next">
+            <a href="../../pokemons/charmander/charmander.html">
+                Charmander >
+            </a>
         </div>
     </section>
-    <section class="card1">
-        <div>
-            <h3>HP:50</h3>
+    <section class="pokemon">
+        <article class="pokemonImg">
+            <img src="../../imagens/bulbasaur.png" alt="bulbasaur" width="220">
+        </article>
+
+        <article class="about">
+            <p>There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</p>
+        </article>
+        <article class="column1">
+            <p><span class="white">Height</span> <br> 0.7 m</p>
+            <p><span class="white">Weight</span> <br> 6.9 kg</p>
+        </article>
+        <article class="column2">
+            <p> <span class="white">Category</span> <br> Seed</p>
+            <p> <span class="white">Abilities </span> <br> Overgrow</p>
+        </article>
+
+    </section>
+    <section class="stats">
+        <div class="head" style="grid-area: h;">Stat</div>
+
+        <div class="captions" style="grid-area: c;">
+            <div class="hp caption">HP: 30</div>
+            <div class="attack caption">Attack: 30</div>
+            <div class="defense caption">Defense: 30</div>
+            <div class="spatk caption">Sp. Atk: 40</div>
+            <div class="spdef caption">Sp. Def: 40</div>
+            <div class="speed caption">Speed: 30</div>
         </div>
-    </section>
-    <section class="card2">
-        <h3>Attack:62</h3>
-    </section>
-    <section class="card3">
-        <h3>Defonse:63</h3>
-    </section>
-    <section class="card4">
-        <h3>Sp.Ath: 50</h3>
-    </section>
-    <section class="card5">
-        <h3>Sp.Def: 80</h3>
-    </section>
-    <section class="card6">
-        <h3>Speed: 50</h3>
-    </section>
+        <div class="progressBars" style="grid-area: b;">
+            <div class="hpBar bar">
+                <div></div>
+            </div>
+            <div class="attackBar bar">
+                <div></div>
+            </div>
+            <div class="defenseBar bar">
+                <div></div>
+            </div>
+            <div class="spatkBar bar">
+                <div></div>
+            </div>
+            <div class="spdefBar bar">
+                <div></div>
+            </div>
+            <div class="speedBar bar">
+                <div></div>
+            </div>
+        </div>
 
-
-
+    </section>
 </body>
 
 </html>

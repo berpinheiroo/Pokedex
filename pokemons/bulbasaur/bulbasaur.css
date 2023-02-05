@@ -1,184 +1,252 @@
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-}
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+* {
     margin: 0;
     padding: 0;
-    font-weight: normal;
+    box-sizing: border-box;
 }
 
-ol,
 ul {
     list-style: none;
 }
 
-body {
-    overflow-x: hidden;
-}
-
-.container {
-    width: 100vh;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.navBar {
-    background-color: rgb(107, 248, 158);
-    height: 5em;
-    width: 100vw;
-}
-
-.logo {
-    margin-top: 2vh;
-    margin-left: 2vw;
-}
-
-.navOptions {
-    width: 100%;
-    font-size: 2em;
-    position: absolute;
-    top: 0.7em;
-    left: 25em;
-}
-
-.searchSection {
-    background-color: rgb(186, 245, 68);
-    height: 5em;
-    width: 100vw;
-}
-
 a {
     text-decoration: none;
-    margin-left: 2em;
     color: #000;
-    cursor: pointer;
-    border-radius: 0.5em;
 }
-
-a:hover {
-    transition-duration: 0.5s;
-    padding: 0.5%;
-    background-color: #eed15e;
-}
-
-.navOptions2 {
-    text-align: center;
-    line-height: 2.5em;
-    font-size: 2em;
-
-
-}
-
 
 body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    background-color: #add8e6;
+}
+
+section {
+    margin-bottom: 1em !important;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+.white {
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgb(148, 253, 218);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.navLinks {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.navLinks li {
+    margin-left: 2em;
+}
+
+.navLink {
+    border-radius: 0.2em;
+    transition-duration: 0.3s;
+}
+
+.navLink:hover {
+    transition-duration: 0.3s;
+    padding: 0.3em;
+    background-color: #ebd272;
+}
+
+.pokemonsBar {
+    display: flex;
+    background-color: rgb(31, 255, 169);
+    justify-content: space-between;
+    padding: 1em 2em 1em 2em;
+    font-weight: 600;
+}
+
+.pokemonsBar>div a {
+    transition-duration: 0.3s;
+}
+
+.pokemonsBar>div a:hover {
+    transition-duration: 0.3s;
+    padding: 0.3em;
     background-color: aqua;
 }
 
-.container {
-    width: 100vw;
+.pokemonImg {
+    display: flex;
+    grid-area: img;
 }
 
-.content {
-    display: flex;
-    width: 500px;
-    background-color: rgb(68, 198, 254);
-    padding: 4em;
-    border-radius: 1em;
-    margin: 0 auto;
-    margin-top: 2em;
+.about {
+    grid-area: a;
+    font-weight: 500;
+}
+
+.column1 {
+    grid-area: c1;
+}
+
+.column2 {
+    grid-area: c2;
 }
 
 .pokemon {
-    background-color: #fff;
-    padding: 2em;
-
+    display: grid;
+    grid-template-columns: 100% 0 0;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "img a a" "img c1 c2";
+    column-gap: 1em;
+    background-color: #30a7d7;
+    width: 15em;
+    height: 15em;
+    padding: 1em;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition-duration: 0.3s;
 }
 
 .pokemon img {
-    height: 300px;
-    width: 300px;
-
+    background-color: #fff;
+    border-radius: 0.2em;
 }
 
-.content:hover {
-    transition-duration: 0.5s;
-    width: 900px;
+.pokemon:hover {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "img a a" "img c1 c2";
+    width: 30em;
+    transition-duration: 0.3s
 }
 
-.features {
-    margin-top: 5.5em;
-    line-height: 2.5em;
-    background-color: rgb(167, 175, 127);
-    height: 3.5em;
-    width: 55%;
-    text-align: center;
+.about>p {
+    text-align: justify;
+}
+
+.stats {
+    background-color: rgb(113, 230, 157);
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "h h" "c b";
+    column-gap: 0.2em;
+    width: 30em;
+    height: 20em;
     margin: 0 auto;
+    padding: 0.5em 0.5em 0 0.5em;
 }
 
-.card1 {
-    background-color: rgb(250, 113, 132);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
 
-.card2 {
-    background-color: rgb(244, 184, 155);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.caption {
+    padding: 0.3em;
 }
 
-.card3 {
-    background-color: rgb(248, 236, 171);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.bar>div {
+    height: 100%;
 }
 
-.card4 {
-    background-color: rgb(177, 183, 250);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.caption,
+.bar {
+    border-radius: 0.2em;
+    height: 12%;
+    margin-bottom: 0.3em;
+    border: solid #000 0.1em;
 }
 
-.card5 {
-    background-color: rgb(199, 250, 169);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.hp {
+    background-color: #ff5959;
 }
 
-.card6 {
-    background-color: rgb(246, 173, 228);
-    width: 55%;
-    height: 2em;
-    margin: 0 auto;
-    line-height: 2em;
+.attack {
+    background-color: #f5ac78;
+}
+
+.defense {
+    background-color: #fae078;
+}
+
+.spatk {
+    background-color: #9db7f5;
+}
+
+.spdef {
+    background-color: #a7db8d;
+}
+
+.speed {
+    background-color: #fa92b2;
+}
+
+.hpBar {
+    background-color: #ff5959;
+}
+
+.hpBar>div {
+    width: 78px;
+    background-color: #ff0000;
+}
+
+.attackBar {
+    background-color: #f5ac78;
+
+}
+
+.attackBar>div {
+    background-color: #fa6800;
+    width: 84px;
+}
+
+.defenseBar {
+    background-color: #fae078;
+}
+
+.defenseBar>div {
+    background-color: #ffcc00;
+    width: 78px;
+}
+
+.spatkBar {
+    background-color: #9db7f5;
+}
+
+.spatkBar>div {
+    background-color: #3d78ff;
+    width: 109px;
+}
+
+.spdefBar {
+    background-color: #a7db8d;
+}
+
+.spdefBar>div {
+    background-color: #67d82e;
+    width: 85px;
+}
+
+.speedBar {
+    background-color: #fa92b2;
+}
+
+.speedBar>div {
+    background-color: #ff4980;
+    width: 100px;
 }
