@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charmander</title>
     <link rel="stylesheet" href="charmander.css">
+    <title>Charmander</title>
 </head>
+
 <body>
     <header class="navbar">
         <a href="../../index.html" class="logo">
@@ -15,92 +17,76 @@
         <nav>
             <ul class="navLinks">
                 <li><a class="navLink" href="../../index.html">Home</a></li>
-                <li><a class="navLink" href="../../pokemons/bulbasaur/bulbasaur.html">Pokedex</a></li>
+                <li><a class="navLink" href="../../pokemons/charmander/charmander.html">Pokedex</a></li>
                 <li><a class="navLink" href="../../cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
-    <section class="secondNavbar">
-        <nav>
-            <ul class="secondNavLinks">
-                <li><a class="secondNavLink" href="../../pokemons/bulbasaur/bulbasaur.html">&#129144 #001 - Bulbasaur</a></li> 
-                <li><a class="secondNavLink" href="../../pokemons/charmander/charmander.html">#004 - Charmander</a></li> 
-                <li><a class="secondNavLink" href="../../pokemons/squirtle/squirtle.html">#007 - Squirtle &#129146</a></li> 
-            </ul>
-        </nav>
+    <section class="pokemonsBar">
+        <div class="prev">
+            <a href="../../pokemons/bulbasaur/bulbasaur.html">
+                < Bulbasaur </a>
+        </div>
+        <div class="current">
+            <a href="#">Nº 004 Charmander</a>
+        </div>
+        <div class="next">
+            <a href="../../pokemons/squirtle/squirtle.html">
+                Squirtle >
+            </a>
+        </div>
     </section>
-
-    <section class="pokemonInfos">
-        <article class="pokemon">
-             <img src="../../imagens/charmander.png" width="320" height="320">
+    <section class="pokemon">
+        <article class="pokemonImg">
+            <img src="../../imagens/charmander.png" alt="charmander" width="220">
         </article>
-        <span class="pokemonText">
-            <span>It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.</span>
-        </span>
-        <div class="column-1">
-            <span class="infoTitle">Height</span>
-            <p class="value">0.6m</p>
-        </div>
-        <div class="column-2">
-            <span class="infoTitle">Category</span>
-            <p class="value">Lizard</p>
-        </div>
-        <div class="column-3">
-            <span class="infoTitle">Weight</span>
-            <p class="value">8.5 Kg</p>
-        </div>
-        <div class="column-4">
-            <span class="infoTitle">Ability</span>
-            <p class="value">Blaze</p>
-        </div>
+
+        <article class="about">
+            <p>It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.</p>
+        </article>
+        <article class="column1">
+            <p><span class="white">Height</span> <br> 0.6 m</p>
+            <p><span class="white">Weight</span> <br> 8.5 kg</p>
+        </article>
+        <article class="column2">
+            <p> <span class="white">Category</span> <br> Lizard</p>
+            <p> <span class="white">Abilities </span> <br> Blaze</p>
+        </article>
+
     </section>
+    <section class="stats">
+        <div class="head" style="grid-area: h;">Stat</div>
 
-    <section class="statTitle">Stat</section>
-    <section class="pokemonStat">
+        <div class="captions" style="grid-area: c;">
+            <div class="hp caption">HP: 30</div>
+            <div class="attack caption">Attack: 40</div>
+            <div class="defense caption">Defense: 30</div>
+            <div class="spatk caption">Sp. Atk: 40</div>
+            <div class="spdef caption">Sp. Def: 30</div>
+            <div class="speed caption">Speed: 40</div>
+        </div>
+        <div class="progressBars" style="grid-area: b;">
+            <div class="hpBar bar">
+                <div></div>
+            </div>
+            <div class="attackBar bar">
+                <div></div>
+            </div>
+            <div class="defenseBar bar">
+                <div></div>
+            </div>
+            <div class="spatkBar bar">
+                <div></div>
+            </div>
+            <div class="spdefBar bar">
+                <div></div>
+            </div>
+            <div class="speedBar bar">
+                <div></div>
+            </div>
+        </div>
 
-        <div class="stat1 bar stat">
-            <span>HP:</span>
-            <span>39</span>
-        </div>
-        <div class="bar1 bar">
-            <div class="valuebar1 valuebar"></div>
-        </div>
-        <div class="stat2 bar stat">
-            <span>Attack:</span>
-            <span>52</span>
-        </div>
-        <div class="bar2 bar">
-            <div class="valuebar2 valuebar"></div>
-        </div>
-        <div class="stat3 bar stat">
-            <span>Defense:</span>
-            <span>43</span>
-        </div>
-        <div class="bar3 bar">
-            <div class="valuebar3 valuebar"></div>
-        </div>
-        <div class="stat4 bar stat">
-            <span>Sp.Attack:</span>
-            <span>60</span>
-        </div>
-        <div class="bar4 bar">
-            <div class="valuebar4 valuebar"></div>
-        </div>
-        <div class="stat5 bar stat">
-            <span>Sp.Defense:</span>
-            <span>50</span>
-        </div>
-        <div class="bar5 bar">
-            <div class="valuebar5 valuebar"></div>
-        </div>
-        <div class="stat6 bar stat">
-            <span>Speed:</span>
-            <span>65</span>
-        </div>
-        <div class="bar6 bar">
-            <div class="valuebar6 valuebar"></div>
-        </div>
     </section>
-
 </body>
+
 </html>

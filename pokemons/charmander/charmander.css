@@ -16,13 +16,23 @@ a {
     color: #000;
 }
 
-
 body {
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     background-color: #add8e6;
 }
 
+section {
+    margin-bottom: 1em !important;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+.white {
+    color: #fff;
+}
 
 .navbar {
     background-color: rgb(148, 253, 218);
@@ -54,235 +64,189 @@ body {
     background-color: #ebd272;
 }
 
-/* 2nd NavBar */
-
-.secondNavbar {
-    width: 100vw;
-    height: 10vh;
-    background-color: #adff2f;
-
-}
-
-.secondNavLinks {
+.pokemonsBar {
     display: flex;
-    align-items:center;
-    justify-content: space-around;
-    font-size: 1.5em;
+    background-color: rgb(31, 255, 169);
+    justify-content: space-between;
+    padding: 1em 2em 1em 2em;
+    font-weight: 600;
 }
 
-.secondNavLinks li {
-    margin-top: 2.5vh;
+.pokemonsBar>div a {
+    transition-duration: 0.3s;
 }
 
-.content {
+.pokemonsBar>div a:hover {
+    transition-duration: 0.3s;
+    padding: 0.3em;
+    background-color: aqua;
+}
+
+.pokemonImg {
     display: flex;
-    width: 90vw;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 1em;
+    grid-area: img;
 }
 
-.pokemonInfos {
-    height: 350px;
-    width: 350px;
+.about {
+    grid-area: a;
+    font-weight: 500;
+}
+
+.column1 {
+    grid-area: c1;
+}
+
+.column2 {
+    grid-area: c2;
+}
+
+.pokemon {
+    display: grid;
+    grid-template-columns: 100% 0 0;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "img a a" "img c1 c2";
+    column-gap: 1em;
     background-color: #30a7d7;
+    width: 15em;
+    height: 15em;
+    padding: 1em;
     margin: 0 auto;
-    border-radius: 1em;
-    margin-top: 5vh;
+    border-radius: 0.5em;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 40% 30%;
-    grid-template-areas:
-    "pokemon text text"
-    "pokemon coluna1 coluna2"
-    "pokemon coluna1 coluna2"
-}
-
-.pokemonInfos:hover {
-    justify-content: left;
-    width: 45em;
-    transition-duration: 0.5s;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35% 30%;
-    grid-template-areas:
-    "pokemon text text"
-    "pokemon column1 column2"
-    "pokemon column3 column4"
+    transition-duration: 0.3s;
 }
 
 .pokemon img {
-    margin-top: 1em;
-    margin-left: 1em;
-    background-color: white;
-    border-radius: 1em;
-    grid-area: pokemon;
+    background-color: #fff;
+    border-radius: 0.2em;
 }
 
-.pokemonText {
-    margin:1em;
-    font-size: larger;
-    grid-area: text;
+.pokemon:hover {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "img a a" "img c1 c2";
+    width: 30em;
+    transition-duration: 0.3s
 }
 
-.infoTitle {
-    font-size: large;
-    color: white;
+.about>p {
+    text-align: justify;
 }
 
-.value {
-    font-size: larger;
-
-}
-.column-1 {
-    grid-area: column1;
-    margin-left: 1em;
-}
-
-.column-2 {
-    grid-area: column2
-}
-
-.column-3 {
-    grid-area: column3;
-    margin-left: 1em;
+.stats {
+    background-color: rgb(113, 230, 157);
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "h h" "c b";
+    column-gap: 0.2em;
+    width: 30em;
+    height: 20em;
+    margin: 0 auto;
+    padding: 0.5em 0.5em 0 0.5em;
 }
 
-.column-4 {
-    grid-area: column4
-}
-
-.statTitle {
-    margin: 2em auto 0 auto;
-    width: 35.55em;
-    height: 3em;
-    font-size: large;
-    padding: 0.5em;
-    background-color: #a7db8d;
+.head {
     display: flex;
     justify-content: center;
-    font-weight: bold;
-}
-.pokemonStat {
-    margin: 0 auto 2em auto;
-    width: 40em;
-    height: 18em;
-    font-weight: bold;
-    background-color: #a7db8d;
-    display: grid;
-    grid-template-columns: 33% 67% ;
-    grid-template-areas:
-    "stat1 bar1 "
-    "stat2 bar2 "
-    "stat3 bar3 "
-    "stat4 bar4 "
-    "stat5 bar5 "
-    "stat6 bar6 "
+    align-items: center;
+    font-weight: 600;
 }
 
-.bar {
-    margin: 0 0.5em 0.5em 0.5em;
-    height: 2em;
-    border-style: solid;
-    display: flex;
-    justify-content: space-between;
+.caption {
+    padding: 0.3em;
 }
 
-.stat {
-    padding: 0.2em;
-}
-
-.valuebar {
+.bar>div {
     height: 100%;
 }
 
-.valuebar1 {
-    width: 5em;
-    background-color: #ff0000;
+.caption,
+.bar {
+    border-radius: 0.2em;
+    height: 12%;
+    margin-bottom: 0.3em;
+    border: solid #000 0.1em;
 }
 
-.valuebar2 {
-    width: 7.5em;
-    background-color: #f08030;
-}
-
-.valuebar3 {
-    width: 6.2em;
-    background-color: #f8d030;
-}
-
-.valuebar4 {
-    width: 8.5em;
-    background-color: #6890f0;
-}
-
-.valuebar5 {
-    width: 7.2em;
-    background-color: #78c850;
-}
-
-.valuebar6 {
-    width: 9em;
-    background-color: #f85888;
-}
-
-.stat1 {
-    grid-area: stat1;
+.hp {
     background-color: #ff5959;
 }
 
-.bar1 {
-    grid-area: bar1;
-    background-color: #ff5959 ;
-}
-
-.stat2 {
-    grid-area: stat2;
+.attack {
     background-color: #f5ac78;
 }
 
-.bar2 {
-    grid-area: bar2;
-    background-color: #f5ac78;
-}
-
-.stat3 {
-    grid-area: stat3;
+.defense {
     background-color: #fae078;
 }
 
-.bar3 {
-    grid-area: bar3;
-    background-color: #fae078 ;
-}
-
-.stat4 {
-    grid-area: stat4;
+.spatk {
     background-color: #9db7f5;
 }
 
-.bar4 {
-    grid-area: bar4;
-    background-color: #9db7f5 ;
-}
-
-.stat5 {
-    grid-area: stat5;
+.spdef {
     background-color: #a7db8d;
 }
 
-.bar5 {
-    grid-area: bar5;
-    background-color: #a7db8d ;
-}
-
-.stat6 {
-    grid-area: stat6;
+.speed {
     background-color: #fa92b2;
 }
 
-.bar6 {
-    grid-area: bar6;
-    background-color: #fa92b2 ;
+.hpBar {
+    background-color: #ff5959;
+}
+
+.hpBar>div {
+    width: 78px;
+    background-color: #ff0000;
+}
+
+.attackBar {
+    background-color: #f5ac78;
+
+}
+
+.attackBar>div {
+    background-color: #fa6800;
+    width: 84px;
+}
+
+.defenseBar {
+    background-color: #fae078;
+}
+
+.defenseBar>div {
+    background-color: #ffcc00;
+    width: 78px;
+}
+
+.spatkBar {
+    background-color: #9db7f5;
+}
+
+.spatkBar>div {
+    background-color: #3d78ff;
+    width: 109px;
+}
+
+.spdefBar {
+    background-color: #a7db8d;
+}
+
+.spdefBar>div {
+    background-color: #67d82e;
+    width: 85px;
+}
+
+.speedBar {
+    background-color: #fa92b2;
+}
+
+.speedBar>div {
+    background-color: #ff4980;
+    width: 100px;
 }
